@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "998185916009",
+    "firebase_url": "https://financialfirebase-7d826-default-rtdb.firebaseio.com",
+    "project_id": "financialfirebase-7d826",
+    "storage_bucket": "financialfirebase-7d826.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998185916009:android:31f02fe6baa6df1d32f4f8",
+        "android_client_info": {
+          "package_name": "com.example.financial_goals_tracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfnjMxJ90D2PDTBuJ0VkhvU3SC7Zn2aFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

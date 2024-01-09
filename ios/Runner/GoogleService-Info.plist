@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAfT8XBjmOCsSG-aHyEzI01nNGjqpRFMyQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>998185916009</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.financialGoalsTracker</string>
+	<key>PROJECT_ID</key>
+	<string>financialfirebase-7d826</string>
+	<key>STORAGE_BUCKET</key>
+	<string>financialfirebase-7d826.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:998185916009:ios:ddafeb32c2e96ed032f4f8</string>
+</dict>
+</plist>
