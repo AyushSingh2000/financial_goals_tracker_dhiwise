@@ -1,5 +1,5 @@
 # financial_goals_tracker
-Flutter Task given by Dhiwise for the position of Junior Flutter Developer
+
 # Task Description:
 Financial Goal Detail Screen with Firebase Firestore Integration
 # MAIN FEATURES OF Finacial goal tracker:
