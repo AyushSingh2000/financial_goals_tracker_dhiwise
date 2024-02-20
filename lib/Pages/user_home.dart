@@ -1,11 +1,11 @@
 import 'package:financial_goals_tracker/colors.dart';
-import 'package:financial_goals_tracker/widgets/custom_container.dart';
+import 'package:financial_goals_tracker/widgets/global_widgets/custom_container.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../widgets/add_goals.dart';
-import '../widgets/add_salary.dart';
-import '../widgets/container_buttons.dart';
+import '../widgets/add/add_goals.dart';
+import '../widgets/add/add_salary.dart';
+import '../widgets/global_widgets/container_buttons.dart';
 
 class UserHome extends StatefulWidget {
   const UserHome({Key? key}) : super(key: key);
@@ -126,7 +126,7 @@ class _UserHomeState extends State<UserHome> {
                   text1: 'Check your Financial \ngoals',
                   imgtext: 'assets/undraw_Pie_graph_re_fvol.png',
                   fntsize: 20),
-              SizedBox(
+              const SizedBox(
                 height: 70,
               ),
             ],

@@ -1,18 +1,18 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
-import '../colors.dart';
+import '../../colors.dart';
 
-class InsertData extends StatefulWidget {
-  const InsertData({Key? key}) : super(key: key);
+class InsertSalary extends StatefulWidget {
+  const InsertSalary({Key? key}) : super(key: key);
 
   @override
-  State<InsertData> createState() => _InsertDataState();
+  State<InsertSalary> createState() => _InsertSalaryState();
 }
 
-class _InsertDataState extends State<InsertData> {
-  final transactionNameController = TextEditingController();
-  final amountController = TextEditingController();
+class _InsertSalaryState extends State<InsertSalary> {
+  final monthController = TextEditingController();
+  final salaryAmountController = TextEditingController();
   //final userSalaryController = TextEditingController();
 
   late DatabaseReference dbRef;
@@ -20,7 +20,7 @@ class _InsertDataState extends State<InsertData> {
   @override
   void initState() {
     super.initState();
-    dbRef = FirebaseDatabase.instance.ref().child('Students');
+    dbRef = FirebaseDatabase.instance.ref().child('Salary');
   }
 
   @override
@@ -32,7 +32,7 @@ class _InsertDataState extends State<InsertData> {
           child: Column(
             children: [
               TextField(
-                controller: transactionNameController,
+                controller: monthController,
                 keyboardType: TextInputType.text,
                 cursorColor: Pallete.txt1color,
                 autofocus: true,
@@ -43,14 +43,14 @@ class _InsertDataState extends State<InsertData> {
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  labelText: 'Transaction Title',
+                  labelText: 'Month',
                   labelStyle: const TextStyle(
                     color: Pallete.txt1color,
                     fontSize: 17,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
                   ),
-                  hintText: 'Enter description',
+                  hintText: 'Enter month',
                   hintStyle: const TextStyle(
                     color: Pallete.txt3color,
                     fontSize: 17,
@@ -63,7 +63,7 @@ class _InsertDataState extends State<InsertData> {
                 height: 30,
               ),
               TextField(
-                controller: amountController,
+                controller: salaryAmountController,
                 keyboardType: TextInputType.number,
                 cursorColor: Pallete.txt1color,
                 decoration: InputDecoration(
@@ -73,11 +73,11 @@ class _InsertDataState extends State<InsertData> {
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                       borderSide: const BorderSide(color: Colors.transparent)),
-                  labelText: 'Amount',
-                  hintText: 'Enter amount spent',
+                  labelText: 'Salary',
+                  hintText: 'Enter salary amount with bonus',
                   hintStyle: const TextStyle(
                     color: Pallete.txt3color,
-                    fontSize: 17,
+                    fontSize: 12,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w500,
                   ),
@@ -129,8 +129,8 @@ class _InsertDataState extends State<InsertData> {
                   ),
                   onPressed: () {
                     Map<String, String> students = {
-                      'transaction': transactionNameController.text,
-                      'amount': amountController.text,
+                      'month': monthController.text,
+                      'amount': salaryAmountController.text,
                       // 'salary': userSalaryController.text
                     };
 

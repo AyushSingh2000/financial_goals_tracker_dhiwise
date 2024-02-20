@@ -54,7 +54,7 @@ class _UserSettingsState extends State<UserSettings> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             GestureDetector(
@@ -65,7 +65,7 @@ class _UserSettingsState extends State<UserSettings> {
                 backgroundImage: _image.existsSync() ? FileImage(_image) : null,
                 child: _image.existsSync()
                     ? null
-                    : Icon(
+                    : const Icon(
                         Icons.camera_alt_rounded,
                         size: 50,
                       ),

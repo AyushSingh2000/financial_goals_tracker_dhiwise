@@ -3,8 +3,8 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 import '../colors.dart';
-import '../widgets/add_transactions.dart';
-import '../widgets/fetch_container.dart';
+import '../widgets/add/add_transactions.dart';
+import '../widgets/fetch/fetch_container.dart';
 
 class UserTransaction extends StatefulWidget {
   const UserTransaction({Key? key}) : super(key: key);
@@ -49,7 +49,7 @@ class _UserTransactionState extends State<UserTransaction> {
           value: amount,
           title: '\$${amount.toStringAsFixed(2)}',
           radius: 100,
-          titleStyle: TextStyle(
+          titleStyle: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.bold,
             color: Colors.white,
@@ -118,7 +118,7 @@ class _UserTransactionState extends State<UserTransaction> {
                             child: Row(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.only(left: 30),
+                                  padding: const EdgeInsets.only(left: 30),
                                   child: Text(
                                     'Total Expense:\n\$${totalAmount.toStringAsFixed(2)}',
                                     style: const TextStyle(
@@ -148,14 +148,14 @@ class _UserTransactionState extends State<UserTransaction> {
                             height: 250, // Adjust the height as needed
                             child: buildPieChart(list),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           Expanded(
                             child: ListView.separated(
                               itemCount:
                                   snapshot.data!.snapshot.children.length,
                               separatorBuilder:
                                   (BuildContext context, int index) {
-                                return SizedBox(height: 10);
+                                return const SizedBox(height: 10);
                               },
                               itemBuilder: (context, index) {
                                 return FetchContainer(

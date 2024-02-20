@@ -2,10 +2,10 @@ import 'package:financial_goals_tracker/Pages/transactions.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'Pages/chart.dart';
-import 'Pages/settings.dart';
-import 'Pages/user_home.dart';
-import 'colors.dart';
+import '../../Pages/chart.dart';
+import '../../Pages/settings.dart';
+import '../../Pages/user_home.dart';
+import '../../colors.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);

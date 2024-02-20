@@ -1,47 +1,3 @@
-// import 'package:flutter/material.dart';
-//
-// import '../colors.dart';
-// import '../widgets/show_contribution.dart';
-//
-// class UserCharts extends StatefulWidget {
-//   const UserCharts({Key? key}) : super(key: key);
-//
-//   @override
-//   State<UserCharts> createState() => _UserChartsState();
-// }
-//
-// class _UserChartsState extends State<UserCharts> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: Pallete.mainbgcolor,
-//       body: SafeArea(
-//         child:
-//             Align(alignment: Alignment.bottomCenter, child: ContributionTab()),
-//       ),
-//     );
-//   }
-// }
-// import 'package:flutter/material.dart';
-//
-// class UserSettings extends StatefulWidget {
-//   const UserSettings({Key? key}) : super(key: key);
-//
-//   @override
-//   State<UserSettings> createState() => _UserSettingsState();
-// }
-//
-// class _UserSettingsState extends State<UserSettings> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: SafeArea(
-//         child: Text('settings'),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +6,8 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:toast/toast.dart';
 
 import '../colors.dart';
-import '../widgets/show_contribution.dart';
+import '../widgets/circular_progress_indicator/circular_loader.dart';
+import '../widgets/show_contribution_bottommodal.dart';
 
 //Icons for goals
 final List<Icon> iconlist = [
@@ -162,21 +119,21 @@ class _UserChartsState extends State<UserCharts> {
                               int pageViewIndex) {
                             return Column(
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
 
                                 //top title
                                 Text(
-                                  "Buy a dream " + list[itemIndex]["goal"],
-                                  style: TextStyle(
+                                  "Buy a dream ${list[itemIndex]["goal"]}",
+                                  style: const TextStyle(
                                     color: Pallete.txt2color,
                                     fontSize: 27,
                                     fontFamily: 'Poppins',
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 35,
                                 ),
 
@@ -197,7 +154,7 @@ class _UserChartsState extends State<UserCharts> {
                                   arcType: ArcType.FULL,
                                   center: Column(
                                     children: [
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 17,
                                       ),
 
@@ -212,7 +169,7 @@ class _UserChartsState extends State<UserCharts> {
                                       //dream amount invested
                                       Text(
                                         "\$${subtractFromFormattedResult(list[itemIndex]['amount'])}",
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           color: Pallete.txt2color,
                                           fontSize: 25,
                                           fontFamily: 'Poppins',
@@ -221,7 +178,7 @@ class _UserChartsState extends State<UserCharts> {
                                       ),
 
                                       //you saved text
-                                      Text(
+                                      const Text(
                                         "You saved",
                                         style: TextStyle(
                                             fontSize: 20, color: Colors.grey),
@@ -229,7 +186,7 @@ class _UserChartsState extends State<UserCharts> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 15,
                                 ),
 
@@ -237,14 +194,14 @@ class _UserChartsState extends State<UserCharts> {
                                 AnimatedSmoothIndicator(
                                   activeIndex: itemIndex,
                                   count: 5,
-                                  effect: WormEffect(
+                                  effect: const WormEffect(
                                     activeDotColor: Colors.white,
                                     dotColor: Colors.grey,
                                     dotHeight: 9,
                                     dotWidth: 9,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 35,
                                 ),
                                 //dream name and total amount
@@ -256,7 +213,7 @@ class _UserChartsState extends State<UserCharts> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Column(
+                                      const Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
@@ -280,14 +237,12 @@ class _UserChartsState extends State<UserCharts> {
                                           ),
                                         ],
                                       ),
-                                      Spacer(),
+                                      const Spacer(),
 
                                       //toat amount of goal text
                                       Text(
-                                        "\$" +
-                                            list[itemIndex]['amount']
-                                                .toString(),
-                                        style: TextStyle(
+                                        "\$${list[itemIndex]['amount']}",
+                                        style: const TextStyle(
                                           color: Pallete.txt2color,
                                           fontSize: 17,
                                           fontFamily: 'Poppins',
@@ -297,7 +252,7 @@ class _UserChartsState extends State<UserCharts> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 15,
                                 ),
 
@@ -320,7 +275,7 @@ class _UserChartsState extends State<UserCharts> {
                                           Row(
                                             children: [
                                               //more savings text
-                                              Text(
+                                              const Text(
                                                 "Need more Savings",
                                                 style: TextStyle(
                                                   color: Pallete.txt1color,
@@ -329,12 +284,12 @@ class _UserChartsState extends State<UserCharts> {
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
-                                              Spacer(),
+                                              const Spacer(),
 
                                               //remaining amount text
                                               Text(
                                                 "\$${calculateThirdOfAmount(list[itemIndex]['amount'])}",
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                   color: Pallete.txt1color,
                                                   fontSize: 15,
                                                   fontFamily: 'Poppins',
@@ -343,14 +298,14 @@ class _UserChartsState extends State<UserCharts> {
                                               ),
                                             ],
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 8,
                                           ),
                                           //monthly target
                                           Row(
                                             children: [
                                               //monthly target amount text
-                                              Text(
+                                              const Text(
                                                 "Monthly Savings Projection",
                                                 style: TextStyle(
                                                   color: Pallete.txt1color,
@@ -359,12 +314,10 @@ class _UserChartsState extends State<UserCharts> {
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
-                                              Spacer(),
+                                              const Spacer(),
                                               Text(
-                                                "\$" +
-                                                    list[itemIndex]['savings']
-                                                        .toString(),
-                                                style: TextStyle(
+                                                "\$${list[itemIndex]['savings']}",
+                                                style: const TextStyle(
                                                   color: Pallete.txt1color,
                                                   fontSize: 15,
                                                   fontFamily: 'Poppins',
@@ -379,20 +332,14 @@ class _UserChartsState extends State<UserCharts> {
                                   ),
                                 ),
 
-                                SizedBox(height: 20),
+                                const SizedBox(height: 20),
                               ],
                             );
                           });
                     } else {
                       // if snapshot data is null, this progress bar will be shown
-                      return SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.68,
-                          child: Center(
-                              child: CircularProgressIndicator(
-                            color: Pallete.txt2color,
-                          )));
+                      return const CircularLoader();
                     }
-                    ;
                   },
                 ),
 

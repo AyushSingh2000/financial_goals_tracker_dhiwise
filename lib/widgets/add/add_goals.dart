@@ -1,7 +1,7 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
-import '../colors.dart';
+import '../../colors.dart';
 
 class InsertGoals extends StatefulWidget {
   const InsertGoals({Key? key}) : super(key: key);
