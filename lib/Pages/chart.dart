@@ -343,7 +343,7 @@ class _UserChartsState extends State<UserCharts> {
                   },
                 ),
 
-                // custom containerfor showing contributions and history
+                // custom container for showing contributions and history
                 ContributionTab(),
               ],
             )),

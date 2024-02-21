@@ -44,7 +44,7 @@ class _UserHomeState extends State<UserHome> {
                   Padding(
                     padding: const EdgeInsets.only(right: 8.0, top: 20),
                     child: IconButton(
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.account_circle,
                         size: 50,
                         color: Pallete.txt2color,
@@ -63,7 +63,7 @@ class _UserHomeState extends State<UserHome> {
                   ContainerButton(
                     onTap: () => showDialog<String>(
                       context: context,
-                      builder: (BuildContext context) => const AlertDialog(
+                      builder: (BuildContext context) => AlertDialog(
                         title: Text(
                           'Enter Monthly Salary',
                           style: TextStyle(
@@ -84,7 +84,7 @@ class _UserHomeState extends State<UserHome> {
                   ContainerButton(
                     onTap: () => showDialog<String>(
                       context: context,
-                      builder: (BuildContext context) => const AlertDialog(
+                      builder: (BuildContext context) => AlertDialog(
                         title: Text(
                           'Enter Financial Goal',
                           style: TextStyle(
@@ -136,7 +136,7 @@ class _UserHomeState extends State<UserHome> {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => showDialog<String>(
           context: context,
-          builder: (BuildContext context) => const AlertDialog(
+          builder: (BuildContext context) => AlertDialog(
             title: Text(
               'Enter Monthly Salary',
               style: TextStyle(

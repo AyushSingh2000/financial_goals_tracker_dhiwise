@@ -75,7 +75,7 @@ class _UserTransactionState extends State<UserTransaction> {
       body: SafeArea(
         child: Column(
           children: [
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(left: 20.0, top: 20),
               child: Align(
                 alignment: Alignment.centerLeft,
@@ -183,7 +183,7 @@ class _UserTransactionState extends State<UserTransaction> {
             FloatingActionButton.extended(
               onPressed: () => showDialog<String>(
                 context: context,
-                builder: (BuildContext context) => const AlertDialog(
+                builder: (BuildContext context) => AlertDialog(
                   title: Text(
                     'Enter Transactions',
                     style: TextStyle(

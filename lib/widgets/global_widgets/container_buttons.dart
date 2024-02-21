@@ -31,7 +31,7 @@ class ContainerButton extends StatelessWidget {
                 height: 118,
                 decoration: BoxDecoration(
                   color: Pallete.txt2color,
-                  borderRadius: const BorderRadius.all(
+                  borderRadius: BorderRadius.all(
                     Radius.circular(12),
                   ),
                   boxShadow: [
@@ -51,7 +51,7 @@ class ContainerButton extends StatelessWidget {
                       height: 8,
                     ),
                     Container(
-                      padding: const EdgeInsets.only(
+                      padding: EdgeInsets.only(
                         left: 12,
                       ),
                       alignment: Alignment.bottomLeft,
@@ -77,7 +77,7 @@ class ContainerButton extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: onTap,
-                          child: const Padding(
+                          child: Padding(
                             padding: EdgeInsets.only(right: 16.0),
                             child: Icon(
                               Icons.arrow_forward_ios,
